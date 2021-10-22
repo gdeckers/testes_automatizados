@@ -93,10 +93,29 @@ public class CalculadoraTest {
         });
     }
 
+    //Metodos adicionados ao original do bootcamp
     @Test
     public void deveResultarDoisAoSubtrairSeisEQuatro() {
         // Calculadora calculadora = new Calculadora();
         assertEquals(2.0, calculadora.subtrai(6, 4));
+    }
+
+    @DisplayName("Valida múltiplas subtracoes com informações em arquivo CSV")
+    @ParameterizedTest
+    @CsvFileSource(resources = "/datasub.csv", numLinesToSkip = 1)
+    void validaMultiplasSubtracoesArqCSV(double num1, double num2, double resultadoEsperado) {
+        assertEquals(resultadoEsperado, calculadora.subtrai(num1,num2));
+    }
+
+    @Test
+    public void deveResultarTrintaAoMultiplicarDezETres() {
+        // Calculadora calculadora = new Calculadora();
+        assertEquals(30, calculadora.multiplica(10,3));
+    }
+
+    @Test
+    public void deveResultarSeisAoDividirTrintaESeisESeis() {
+        assertEquals(6, calculadora.divide(36,6));
     }
 
 }
