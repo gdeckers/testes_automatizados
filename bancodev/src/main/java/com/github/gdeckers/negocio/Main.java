@@ -29,6 +29,48 @@ public class Main {
                     }
                     pulalinha();
                     break;
+
+                case 2:
+                    System.out.println("Espere um pouco...");
+                    List<Cliente> clientes = gerCliente.getClientesBanco();
+                    System.out.println(clientes.toString());
+                    pulalinha();
+                    break;
+
+                case 3:
+                    System.out.println("Digite o ID do Cliente: ");
+                    int idCliente1 = sc.nextInt();
+                    Cliente cliente1 = gerCliente.pesquisaCliente(idCliente1);
+
+                    if (cliente1 != null) {
+                        cliente1.setAtivo(true);
+                    }
+                    pulalinha();
+                    break;
+
+                case 4:
+                    System.out.println("Digite o ID do Cliente: ");
+                    int idCliente2 = sc.nextInt();
+                    Cliente cliente2 = gerCliente.pesquisaCliente(idCliente2);
+
+                    if (cliente2 != null) {
+                        cliente2.setAtivo(false);
+                    }
+                    pulalinha();
+                    break;
+
+                case 5:
+                    continua = false;
+                    System.out.println("################# Sistema encerrado #################");
+                    break;
+
+                default:
+                    System.out.println();
+                    System.out.println();
+                    System.out.println();
+                    System.out.println();
+                    System.out.println();
+                    break;
             }
 
 

@@ -1,0 +1,5 @@
+id,nome,idade,email,ativo,idcontacorrente
+1,"John Doe",31,"gugafarias@gmail.com",true,1
+2,"Tony Stark",44,"gugafarias@gmail.com",true,2
+3,"Natasha Romanov",28,"gugafarias@gmail.com",true,3
+4,"Kara Denvers",23,"gugafarias@gmail.com",true,4
